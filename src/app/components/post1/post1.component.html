@@ -1,0 +1,7 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let post of postArr">
+        {{post.title}}
+    </li>
+</ul>
+
+<button class="btn btn-lg btn-primary" (click)="onRemove()">Remove</button>

@@ -1,0 +1,26 @@
+
+
+<!-- count -->
+ <app-passenger-count [totalPassCount]="passengersArr.length" [checkInCount]="checkInCount"></app-passenger-count>
+
+
+<!-- list -->
+ <ul class="list-group my-5" *ngIf="passengersArr.length > 0; else noPassenger">
+    <li class="list-group-item" *ngFor="let pass of passengersArr">
+        {{pass.fullName}}
+    </li>
+ </ul>
+
+
+ <ng-template #noPassenger>
+    <p class="alert alert-info">
+    Not added Passenger yet!!!!
+ </p>
+ </ng-template>
+
+<!-- cards -->
+
+
+<app-passenger-cards [passCards]="pass" 
+(emitRemoveFlag)="getRemovFlag($event)"
+*ngFor="let pass of passengersArr"></app-passenger-cards>

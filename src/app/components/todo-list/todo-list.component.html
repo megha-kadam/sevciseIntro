@@ -1,0 +1,43 @@
+<!-- <h2 class="text-center">Todo List</h2>
+<ul class="list-group" *ngIf="todoArr.length > 0; else noTodo">
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let todo of todoArr">
+       <strong>
+         {{todo.todoItem}}
+       </strong>
+       <div>
+        <button class="btn btn-sm btn-outline-info mr-3">Edit</button>
+        <button class="btn btn-sm btn-outline-danger" (click)="onRemoveTodo(todo.todoId)">Remove</button>
+       </div>
+    </li>
+</ul>
+
+<ng-template #noTodo>
+  <p class="alert alert-info">
+    No Todo added yet!!
+  </p>
+</ng-template> -->
+
+
+
+<h2 class="text-center">Todo List</h2>
+<div class="card">
+  <div class="card-body">
+    <ul class="list-group" *ngIf="todosArr.length > 0; else noTodo">
+      <li class="list-group-item d-flex justify-content-between" *ngFor="let todo of todosArr">
+        <strong>
+          {{todo.todoItem}}
+        </strong>
+        <div>
+          <button class="btn btn-sm btn-outline-info mr-3">Edit</button>
+          <button class="btn btn-sm btn-outline-danger" (click)="onRemoveTodo(todo)">Remove</button>
+        </div>
+      </li>
+    </ul>
+
+    <ng-template #noTodo>
+      <p class="alert alert-info">
+        No Todos added yet!!!
+      </p>
+    </ng-template>
+  </div>
+</div>

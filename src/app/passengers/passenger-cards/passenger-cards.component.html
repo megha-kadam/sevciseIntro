@@ -1,0 +1,65 @@
+<mat-card class="mb-3">
+    <mat-card-title>
+        <!-- <h3 *ngIf="!isInEditMode">
+            {{passCards.fullName}}
+        </h3>
+        <div class="form-group">
+            <input type="text" [value]="passCards.fullName" *ngIf="isInEditMode">
+        </div> -->
+
+        <div class="form-group">
+            <span class="checkedInColor"
+            [ngClass]="{
+                'bg-success' : passCards.checkedIn,
+                'bg-danger' : passCards.checkedIn
+            }"></span>
+            <input type="text" class="form-control" #name [disabled]="!isInEditMode" [value]="passCards.fullName">
+        </div>
+    </mat-card-title>
+    <mat-card-content>
+        <p>
+          Checked In Date : {{passCards.checkInDate ? (passCards.checkInDate | date) : "Not checked in yet!!"}}
+        </p>
+        <p>
+            Children : {{ passCards.children? passCards.children?.length : 0}}
+        </p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" *ngIf="!isInEditMode" (click)="isInEditMode = true">Edit</button>
+        <button mat-raised-button color="primary" *ngIf="isInEditMode" (click)="isInEditMode = false; onUpdate(name)">Done</button>
+          <button mat-raised-button color="warn" (click)="onRemovePassenger(passCards)">Remove</button>
+    </mat-card-actions>
+</mat-card>
+
+
+
+
+
+
+
+
+
+<!-- what is spread operator and rest operator
+what is swallow copy and deep copy
+what are call, band, and apply
+what is async await
+what are promises
+what is hoisting
+what are js operators
+DSA- find frequency count from given string
+Function declaration and fuction expression
+what is AJAX
+what is javascript and who discovered js
+differrence between tostring ang join method
+differrence between filter and find
+what is DOM
+what is call stack
+what is HOF
+what is Call back Function
+what is arrow Function
+Enlist array methods
+differrence between var let and const
+what is object properties and object method
+event loop
+Type of web storage -->

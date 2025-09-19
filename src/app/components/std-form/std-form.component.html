@@ -1,0 +1,68 @@
+<!-- <div class="card">
+    <div class="card-body">
+        <form #stdForm="ngForm" (ngSubmit)="onAddStd()">
+            <div class="form-group">
+                <label for="name">Name <sup class="text-danger">*</sup></label>
+                <input type="text" required pattern="[a-zA-Z]+" id="name" name="name" ngModel #name="ngModel" class="form-control">
+
+                <strong class="text-danger" *ngIf="name.touched && name.hasError('required')">
+                    Name field is required!!
+                </strong>
+                <strong class="text-danger" *ngIf="name.dirty && name.hasError('pattern')">
+                    Invalid pattern for Name!!
+                </strong>
+            </div>
+             <div class="form-group">
+                <label for="email">Email <sup class="text-danger">*</sup></label>
+                <input type="text" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" ngModel #email="ngModel" class="form-control">
+
+                <strong class="text-danger" *ngIf="email.touched && email.hasError('required')">
+                    Email field is required!!
+                </strong>
+                <strong  class="text-danger" *ngIf="email.dirty && email.hasError('pattern')">
+                    Invalid pattern of Email!!
+                </strong>
+            </div>
+             <div class="form-group">
+                <label for="position">Position <sup class="text-danger">*</sup></label>
+                <input type="text" id="position" required name="position" ngModel #position="ngModel" class="form-control">
+ 
+                 <strong class="text-danger" *ngIf="position.touched && position.hasError('required')">
+                    Position field is required!!
+                </strong>
+            </div>
+
+            <button class="btn btn-block btn-primary">Add Students</button>
+        </form>
+    </div>
+</div> -->
+
+
+<h2 class="text-center">Student Form</h2>
+<div class="card">
+    <div class="card-body">
+        <form #stdForm="ngForm" (ngSubmit)="onAddStd()">
+            <div class="form-group">
+                <label for="fName">First Name <sup class="text-danger">*</sup></label>
+                <input type="text" class="form-control" id="fName" name="fName" required ngModel #fName="ngModel">
+            </div>
+
+            <div class="form-group">
+                <label for="lName">Last Name <sup class="text-danger">*</sup></label>
+                <input type="text" class="form-control" id="lName" name="lName" required ngModel #lName="ngModel">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <sup class="text-danger">*</sup></label>
+                <input type="text" class="form-control" id="email" name="email" required ngModel #email="ngModel">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact <sup class="text-danger">*</sup></label>
+                <input type="text" class="form-control" id="contact" name="contact" required ngModel #contact="ngModel">
+            </div>
+
+            <button class="btn btn-block btn-primary">Add student</button>
+        </form>
+    </div>
+</div>
